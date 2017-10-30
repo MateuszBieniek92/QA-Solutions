@@ -14,6 +14,3 @@ A  website projected by myself.
 
 In progress... :)
 
-## Demo image:
-
-![Screenshot](qa solutions_main_website.jpg)
