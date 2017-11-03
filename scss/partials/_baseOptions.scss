@@ -1,0 +1,46 @@
+$columnsCount: 12;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    //width: 1170px;
+    //    border: 1px solid blue;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row {
+    &::after,
+    &::before {
+        display: table;
+        content: '';
+        clear: both;
+    }
+}
+
+@for $i from 1 through $columnsCount {
+    .col-#{$i} {
+        width: (100%/$columnsCount)*$i;
+    }
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    //    border: 1px solid red;
+    padding: 10px;
+    //    @media (min-width: 400px) {
+    //        display: none;
+    //    }
+}
