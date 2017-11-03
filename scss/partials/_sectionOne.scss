@@ -1,0 +1,14 @@
+.main-section {
+    background-image: url('../images/main site/main backgound.png');
+    background-size: cover;
+    background-position: -350px 0;
+    height: 100vh;
+    .main-text {
+        margin-top: 20em;
+        p {
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
+    }
+}
