@@ -7,7 +7,7 @@ section {
             flex-direction: row;
         }
         li {
-//            width: 33%;
+            //            width: 33%;
             flex-direction: column;
             .computer-icon,
             .people-icon,
@@ -19,6 +19,9 @@ section {
                 background-image: url('../images/main site/notebook.png');
                 width: 125px;
                 height: 100px;
+                @media (min-width: 768px) {
+                    height: 125px;
+                }
             }
             .people-icon {
                 background-image: url('../images/main site/people.png');
@@ -29,12 +32,16 @@ section {
                 background-image: url('../images/main site/book.png');
                 width: 90px;
                 height: 85px;
+                @media (min-width: 768px) {
+                    height: 125px;
+                }
             }
             .text-header {
                 margin: 1em;
                 text-align: center;
                 font-size: 18px;
                 color: $headerColor;
+                font-weight: 600;
             }
             .text-description {
                 margin: 2em 1em 4em 1em;

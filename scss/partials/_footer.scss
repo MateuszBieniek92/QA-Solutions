@@ -1,0 +1,25 @@
+footer {
+    background: $mainColor;
+    .adress,
+    .contact {
+        list-style-type: none;
+        margin: 4em 1em;
+        li{
+            margin-bottom: 0.2em;
+            font-size: 16px;
+            color: $white;
+            text-align: center;
+        }
+    }
+    .contact {
+        li {
+            color: $orange;
+        }
+    }
+    p {
+        text-align: center;
+        color: $white;
+        font-size: 16px;
+        margin: 1em;
+    }
+}
