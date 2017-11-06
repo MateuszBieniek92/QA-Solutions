@@ -29,31 +29,17 @@ $columnsCount: 12;
     }
 }
 
-@for $i from 1 through $columnsCount {
-    .col-#{$i} {
-        width: (100%/$columnsCount)*$i;
-    }
-    .col-xs-#{$i} {
-        width: (100%/$columnsCount)*$i;
-    }
-}
-
 [class*='col-'] {
     float: left;
     min-height: 1px;
+    width: 100%;
     //    border: 1px solid red;
-    padding: 10px;
-    //    @media (min-width: 400px) {
-    //        display: none;
-    //    }
 }
 
-[class*='col-xs-'] {
-    float: left;
-    min-height: 1px;
-    //    border: 1px solid red;
-    padding: 10px;
-    //    @media (min-width: 400px) {
-    //        display: none;
-    //    }
+@media (min-width: 768px) {
+    @for $i from 1 through $columnsCount {
+        .col-#{$i} {
+            width: (100%/$columnsCount)*$i;
+        }
+    }
 }

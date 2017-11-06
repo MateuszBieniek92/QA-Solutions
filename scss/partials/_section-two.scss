@@ -7,7 +7,6 @@ section {
             flex-direction: row;
         }
         li {
-            //            width: 33%;
             flex-direction: column;
             .computer-icon,
             .people-icon,
@@ -34,6 +33,7 @@ section {
                 height: 85px;
                 @media (min-width: 768px) {
                     height: 125px;
+                    background-position: 0 15px;
                 }
             }
             .text-header {
@@ -50,5 +50,15 @@ section {
                 color: $mainColor;
             }
         }
+         :last-child {
+            p {
+                margin: 3.4em 1em 4em 1em;
+            }
+        }
     }
 }
+
+
+
+
+

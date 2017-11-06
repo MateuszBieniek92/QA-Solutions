@@ -5,10 +5,11 @@ header {
         background-image: url('../images/main site/logo.png');
         display: flex;
         justify-content: flex-start;
-        height: 50px;
+        height: 65px;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         margin: 1em;
+        width: 96px;
     }
     .menu {
         display: none;
