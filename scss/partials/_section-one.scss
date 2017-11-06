@@ -1,9 +1,4 @@
 section {
-    .about-header {
-        text-align: center;
-        font-size: 22px;
-        margin: 3em 0em;
-    }
     .about-us {
         display: flex;
         flex-direction: column;
@@ -15,12 +10,20 @@ section {
             background-size: cover;
             background-repeat: no-repeat;
             width: 100vw;
-            height: 260px;
+            height: 270px;
         }
         .about-description {
+            color: $mainColor;
             text-align: justify;
-            margin: 2em 1em;
-            font-size: 15px;
+            margin: 2em 1em 0em 1em;
+            font-size: 16px;
         }
     }
+}
+
+.section-header {
+    text-align: center;
+    font-size: 26px;
+    margin: 3em 0em;
+    color: $headerColor;
 }

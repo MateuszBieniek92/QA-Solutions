@@ -1,0 +1,47 @@
+section {
+    .what-we-do {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+        li {
+//            width: 33%;
+            flex-direction: column;
+            .computer-icon,
+            .people-icon,
+            .book-icon {
+                margin: auto;
+                background-repeat: no-repeat;
+            }
+            .computer-icon {
+                background-image: url('../images/main site/notebook.png');
+                width: 125px;
+                height: 100px;
+            }
+            .people-icon {
+                background-image: url('../images/main site/people.png');
+                width: 125px;
+                height: 125px;
+            }
+            .book-icon {
+                background-image: url('../images/main site/book.png');
+                width: 90px;
+                height: 85px;
+            }
+            .text-header {
+                margin: 1em;
+                text-align: center;
+                font-size: 18px;
+                color: $headerColor;
+            }
+            .text-description {
+                margin: 2em 1em 4em 1em;
+                text-align: justify;
+                font-size: 16px;
+                color: $mainColor;
+            }
+        }
+    }
+}
