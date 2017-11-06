@@ -1,0 +1,26 @@
+section {
+    .about-header {
+        text-align: center;
+        font-size: 22px;
+        margin: 3em 0em;
+    }
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+        .about-photo {
+            background-image: url('../images/main site/about_us_photo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 260px;
+        }
+        .about-description {
+            text-align: justify;
+            margin: 2em 1em;
+            font-size: 15px;
+        }
+    }
+}
