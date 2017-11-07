@@ -22,7 +22,7 @@ $(function () {
     $(function () {
         $(window).on('scroll', function () {
             const pix = $(document).scrollTop();
-            console.log('scroll: ' + pix);
+//            console.log('scroll: ' + pix);
 
             if (pix > top) {
                 $sticky.addClass('sticky');
