@@ -35,6 +35,12 @@ footer {
     .contact {
         li {
             color: $orange;
+            transition: 1s;
+        }
+        li:hover {
+            color: $white;
+            transition: 0.5s;
+            cursor: pointer;
         }
     }
     p {
