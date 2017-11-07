@@ -17,9 +17,16 @@ section {
                 background-position: 0 -86px;
             }
             @media (min-width: 768px) {
-                width: 72vw;
-                height: 419px;
-                background-position: -28px 0;
+                width: 585px;
+                height: 440px;
+                background-position: -105px 0;
+            }
+            @media (min-width: 900px) {
+                background-position: -85px 0;
+            }
+            @media (min-width: 1100px) {
+                //                background-position: -28px 0;
+                background-position: -55px 0;
             }
         }
         .about-description {
@@ -29,7 +36,7 @@ section {
             padding: 0 1em;
             font-size: 16px;
             @media (min-width: 768px) {
-                padding: 0;
+                padding: 0 2em;
                 margin: 0;
             }
         }
@@ -42,4 +49,3 @@ section {
     margin: 3em 0em;
     color: $headerColor;
 }
-
