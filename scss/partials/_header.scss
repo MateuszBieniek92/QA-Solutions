@@ -8,11 +8,16 @@ header {
         background-image: url('../images/main site/logo.png');
         display: flex;
         justify-content: flex-start;
+        background-position: 0 0;
         height: 50px;
         background-repeat: no-repeat;
         background-size: cover;
-        margin: 1em;
+        margin-top: 1em;
         width: 85px;
+    }
+    .sticky-logo {
+        margin-top: 0.2em;
+        transition: 0.5s;
     }
     .menu {
         display: none;
@@ -20,7 +25,7 @@ header {
             list-style-type: none;
             display: flex;
             justify-content: flex-end;
-            margin-top: -3.5em;
+            margin-top: -3em;
         }
         li {
             @media(min-width: 900px) {
@@ -35,6 +40,9 @@ header {
                 letter-spacing: 0.5px;
             }
         }
+    }
+    .sticky-menu {
+        margin-top: -2.5em;
     }
     .hamburger {
         float: right;
@@ -71,5 +79,30 @@ header {
     }
     .hamburger:hover {
         cursor: pointer;
+    }
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: $mainColor;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.35);
+    transition: 0.4s;
+    display: inline-block;
+    @media(min-width: 900px) {
+        height: 55px;
+    }
+    .logo {
+        background-position: 0 -57px;
+    }
+    .menu {
+        li {
+            a {
+                color: $white;
+            }
+        }
     }
 }
