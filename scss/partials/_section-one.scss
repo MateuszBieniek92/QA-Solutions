@@ -8,10 +8,11 @@ section {
         }
         .about-photo {
             background-image: url('../images/main site/about_us_photo.png');
-            background-size: cover;
             background-repeat: no-repeat;
+            /* background-position: -141px -90px; */
             width: 100vw;
-            height: 270px;
+            height: 288px;
+            background-size: cover;
             @media only screen and (orientation: landscape) {
                 height: 330px;
                 background-position: 0 -86px;
@@ -19,13 +20,13 @@ section {
             @media (min-width: 768px) {
                 width: 585px;
                 height: 440px;
-                background-position: -105px 0;
+                background-position: -43px 0;
             }
             @media (min-width: 900px) {
-                background-position: -85px 0;
+                background-position: -17px 0;
             }
             @media (min-width: 1100px) {
-                background-position: -55px 0;
+                background-position: 0 0;
             }
         }
         .about-description {
@@ -49,3 +50,4 @@ section {
     margin: 3em 0em;
     color: $headerColor;
 }
+

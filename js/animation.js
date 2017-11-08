@@ -60,16 +60,16 @@ $(function () {
 
     const bg = $('.main-section');
 
-    function resizeBackground() {
+    function resizeMainBackground() {
         bg.height($(window).height() + 60);
     }
 
-    $(window).resize(resizeBackground);
+    $(window).resize(resizeMainBackground);
     
-    resizeBackground();
+    
 
 
 
-
+    resizeMainBackground();
     animatedHamburger();
 });

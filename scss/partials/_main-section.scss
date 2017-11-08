@@ -1,16 +1,21 @@
 .main-section {
     background-image: url('../images/main site/main backgound.png');
-    //    background-size: cover;
     background-position: -990px -308px;
-    //    background-attachment: fixed;
-    height: 100vh;
     display: flex;
     align-items: center;
+    @media (min-width: 768px) {
+        background-position: -700px -308px;
+    }
     @media only screen and (orientation: landscape) {
-        background-position: 0 0;
+        background-position: -457px -160px;
     }
     @media (min-width: 1200px) {
         display: block;
+        background-position: -295px -160px;
+    }
+    @media (min-width: 1400px) {
+        display: block;
+        background-position: -150px -160px;
     }
     .main-text {
         @media (min-width: 1200px) {
