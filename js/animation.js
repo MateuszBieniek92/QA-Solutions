@@ -22,7 +22,7 @@ $(function () {
     $(function () {
         $(window).on('scroll', function () {
             const pix = $(document).scrollTop();
-//            console.log('scroll: ' + pix);
+            //            console.log('scroll: ' + pix);
 
             if (pix > top) {
                 $sticky.addClass('sticky');
@@ -55,6 +55,19 @@ $(function () {
             $ul.removeClass('sticky-menu');
         }
     });
+
+    /// resize
+
+    const bg = $('.main-section');
+
+    function resizeBackground() {
+        bg.height($(window).height() + 60);
+    }
+
+    $(window).resize(resizeBackground);
+    
+    resizeBackground();
+
 
 
 
