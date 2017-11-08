@@ -3,6 +3,7 @@
     background-position: -990px -308px;
     display: flex;
     align-items: center;
+    max-height: 100%;
     @media (min-width: 768px) {
         background-position: -700px -308px;
     }
@@ -38,3 +39,5 @@
         }
     }
 }
+
+
