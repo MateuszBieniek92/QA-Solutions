@@ -1,8 +1,17 @@
 @import "modules/_colors.scss"; 
 @import "partials/_baseOptions.scss";
 
-@import "partials/_header.scss";
-@import "partials/_main-section.scss";
-@import "partials/_section-one.scss";
-@import "partials/_section-two.scss";
-@import "partials/_footer.scss";
+/// main site 
+
+@import "partials/main_site/_header.scss";
+@import "partials/main_site/_main-section.scss";
+@import "partials/main_site/_section-one.scss";
+@import "partials/main_site/_section-two.scss";
+@import "partials/main_site/_footer.scss";
+
+
+/// training
+@import "partials/training/_main-section.scss";
+@import "partials/training/_training-section.scss";
+@import "partials/training/_footer.scss";
+

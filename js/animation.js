@@ -59,17 +59,28 @@ $(function () {
     /// resize
 
     const bg = $('.main-section');
+    const triangle = $('.triangle');
 
     function resizeMainBackground() {
         bg.height($(window).height() + 60);
     }
 
     $(window).resize(resizeMainBackground);
-    
-    
 
+    /// training btns
 
+    var $trainingList = $('.training-list');
+
+    function showHideList() {
+        $trainingList.find('dd').addClass('hide');
+
+        $trainingList.find('dt').on('click', function () {
+            $(this).next().slideToggle().toggleClass('hide');
+            $(this).children().last().toggleClass('rotate');
+        })
+    }
 
     resizeMainBackground();
     animatedHamburger();
+    showHideList();
 });

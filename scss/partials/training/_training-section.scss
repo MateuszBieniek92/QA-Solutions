@@ -1,0 +1,71 @@
+.training-section {
+    .section-header {
+        margin: 3em 0em 1em 0;
+    }
+    .hide {
+        display: none;
+    }
+    .training-list {
+        margin: 0 1em;
+        @media(min-width: 768px) {
+            margin: 0;
+        }
+        color: $mainColor;
+        dt {
+            border: 2px solid $mainColor;
+            margin-top: 2em;
+            padding: 1em;
+            font-size: 18px;
+            color: $mainColor;
+            display: flex;
+            align-items: center;
+            p {
+                flex-grow: 1;
+                font-size: 18px;
+            }
+            .triangle {
+                width: 0;
+                height: 0;
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+                border-top: 15px solid $mainColor;
+                float: right;
+                margin: 0.3em 0.5em 0 0;
+            }
+            .rotate {
+                transform: rotate(180deg);
+                transition: 1s;
+            }
+        }
+        dt:hover {
+            color: $white;
+            background: $mainColor;
+            transition: 0.5s;
+            .triangle {
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+                border-top: 15px solid $white;
+            }
+        }
+        dd {
+            display: none;
+            margin-bottom: 2em;
+            border: 2px solid $mainColor;
+            border-image: initial;
+            border-top: none;
+            padding: 1em;
+            p,
+            ol,
+            li {
+                color: $mainColor;
+                font-size: 16px;
+                margin-bottom: 1em;
+            }
+            ol {
+                li {
+                    margin: 0 0 0 3em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.main-section {
+    background-image: url('../images/training/training-main-bg.png');
+    background-position: -990px -308px;
+    display: flex;
+    align-items: center;
+    max-height: 100%;
+    @media (min-width: 768px) {
+        background-position: -700px -308px;
+    }
+    @media only screen and (orientation: landscape) {
+        background-position: -270px -430px;
+    }
+    @media (min-width: 1200px) {
+        display: block;
+        background-position: -295px -160px;
+    }
+    @media (min-width: 1400px) {
+        display: block;
+        background-position: -150px -160px;
+    }
+}
