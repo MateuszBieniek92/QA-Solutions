@@ -22,8 +22,6 @@ $(function () {
     $(function () {
         $(window).on('scroll', function () {
             const pix = $(document).scrollTop();
-            //            console.log('scroll: ' + pix);
-
             if (pix > top) {
                 $sticky.addClass('sticky');
                 $logo.addClass('sticky-logo');

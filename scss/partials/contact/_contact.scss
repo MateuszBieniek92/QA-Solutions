@@ -1,0 +1,56 @@
+.training-section {
+    .section-header {
+        margin: 3em 0em 3em 0;
+    }
+    .contact-subpage {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        .adress {
+            list-style-type: none;
+            li {
+                font-size: 18px;
+                margin-top: 1em;
+            }
+             :first-child {
+                font-weight: bold;
+                margin-top: 3em;
+                color: $mainColor;
+                @media (min-width: 768px) {
+                    margin-top: 0em;
+                }
+            }
+             :nth-child(5),
+             :nth-child(6) {
+                color: $orange;
+            }
+             :nth-child(5):hover,
+             :nth-child(6):hover {
+                color: $mainColor;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.map {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        padding-bottom: 40%;
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @media (min-width: 1000px) {
+            width: 600px;
+            height: 450px;
+        }
+    }
+}
