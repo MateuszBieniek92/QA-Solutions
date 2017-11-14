@@ -113,8 +113,7 @@ header {
         }
         &.is-active {
             transition: all 0.3s ease-in-out;
-            transition-delay: 0.2s;
-//            transition-delay: 0.6s;
+            transition-delay: 0.6s;
             transform: rotate(45deg);
             .bar:nth-child(2) {
                 width: 0px;
