@@ -1,17 +1,5 @@
 $(function () {
 
-
-    /// hamburger    
-
-    let hamburger = $('.hamburger');
-
-    function animatedHamburger() {
-        hamburger.on("click", function () {
-            $(this).toggleClass("is-active");
-        });
-    };
-
-
     /// sticky menu
 
     const $sticky = $('.stickyBar');
@@ -53,6 +41,28 @@ $(function () {
             $ul.removeClass('sticky-menu');
         }
     });
+
+    /// hamburger    
+
+    let hamburger = $('.hamburger');
+
+    function animatedHamburger() {
+        hamburger.on("click", function () {
+            $(this).toggleClass("is-active");
+        });
+    };
+
+    /// show hide menu
+
+    function showMenu() {
+        hamburger.on('click', function () {
+            $ul.slideToggle().addClass('show-hide-menu');
+        });
+    }
+    showMenu();
+
+
+
 
     /// resize
 
