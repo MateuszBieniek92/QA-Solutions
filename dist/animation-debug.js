@@ -2,14 +2,14 @@ $(function () {
 
     /// sticky menu
 
-    const $sticky = $('.stickyBar');
-    const $logo = $('.logo');
-    const $ul = $sticky.find('.menu');
-    const top = $ul.offset().top;
+    var $sticky = $('.stickyBar');
+    var $logo = $('.logo');
+    var $ul = $sticky.find('.menu');
+    var top = $ul.offset().top;
 
     $(function () {
         $(window).on('scroll', function () {
-            const pix = $(document).scrollTop();
+            var pix = $(document).scrollTop();
             if (pix > top) {
                 $sticky.addClass('sticky');
                 $logo.addClass('sticky-logo');
@@ -29,7 +29,7 @@ $(function () {
             pix = $sticky.offset().top;
         }
 
-        const pix = $(document).scrollTop();
+        var pix = $(document).scrollTop();
 
         if (pix > top) {
             $sticky.addClass('sticky');
@@ -44,7 +44,7 @@ $(function () {
 
     /// hamburger    
 
-    const hamburger = $('.hamburger');
+    var hamburger = $('.hamburger');
 
     function animatedHamburger() {
         hamburger.on("click", function () {
@@ -59,15 +59,15 @@ $(function () {
             $ul.slideToggle().addClass('show-hide-menu');
         });
     }
-    showMenu();
+    
 
 
 
 
     /// resize
 
-    const bg = $('.main-section');
-    const triangle = $('.triangle');
+    var bg = $('.main-section');
+    var triangle = $('.triangle');
 
     function resizeMainBackground() {
         bg.height($(window).height() + 60);
@@ -88,6 +88,7 @@ $(function () {
         })
     }
 
+    showMenu();
     resizeMainBackground();
     animatedHamburger();
     showHideList();
