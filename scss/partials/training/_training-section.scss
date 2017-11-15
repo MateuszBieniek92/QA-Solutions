@@ -4,6 +4,7 @@
     }
     .hide {
         display: none;
+        overflow: hidden;
     }
     .training-list {
         margin: 0 1em;
@@ -38,6 +39,7 @@
             }
         }
         dt:hover {
+            cursor: pointer;
             color: $white;
             background: $mainColor;
             transition: 0.5s;

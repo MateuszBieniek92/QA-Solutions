@@ -35,9 +35,10 @@ header {
                 position: relative;
                 text-decoration: none;
                 color: $white;
-                font-size: 14px;
+                font-size: 16px;
                 padding-bottom: 0.5em;
                 letter-spacing: 0.5px;
+                font-weight: bold;
             }
             a:before {
                 margin-top: 1em;
@@ -75,21 +76,24 @@ header {
         width: 100vw;
         text-align: center;
         flex-direction: column;
-        padding: 1em 0;
+//        padding: 1em 0;
         li {
             display: block;
-            padding: 1em 0;
+//            padding: 1em 0;
             font-size: 20px;
             font-weight: bold;
             a {
+                display: block;
+                padding: 2em 0;
                 text-decoration: none;
                 color: white;
             }
         }
         li:hover {
-            background-color: $orange;
+            background-color: $white;
             a,
             i {
+                cursor: pointer;
                 color: $mainColor;
                 transition: 0.3s;
                 cursor: pointer;

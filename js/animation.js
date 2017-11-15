@@ -59,7 +59,7 @@ $(function () {
             $ul.slideToggle().addClass('show-hide-menu');
         });
     }
-    showMenu();
+    
 
 
 
@@ -88,6 +88,7 @@ $(function () {
         })
     }
 
+    showMenu();
     resizeMainBackground();
     animatedHamburger();
     showHideList();
