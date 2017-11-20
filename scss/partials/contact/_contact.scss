@@ -35,6 +35,7 @@
     .contact-form {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         form {
             display: flex;
             width: 100%;
@@ -49,26 +50,42 @@
                 margin: 1em auto;
                 @media (min-width: 768px) {
                     width: 400px;
-                    margin-bottom: 2em;
                 }
+            }
+            .border-input {
+                border: 2px solid $mainColor;
             }
             textarea {
                 height: 150px;
             }
-            label {}
-            .send-btn {
-                width: 115px;
-                height: 40px;
-                background: $mainColor;
-                border: none;
-                color: white;
-                display: inline-block;
+            label {
                 margin: 0 auto;
+                transition: 0.5s;
+                color: $orange;
+                font-weight: bold;
+            }
+             :last-child {
+                margin-top: 2em;
+                color: $mainColor;
             }
              ::placeholder {
                 color: $mainColor;
-                  font-family: 'Arial', sans-serif;
-                 font-size: 14px;
+                font-family: 'Arial', sans-serif;
+                font-size: 14px;
+            }
+        }
+        .send-btn {
+            width: 115px;
+            height: 40px;
+            background: $mainColor;
+            border: none;
+            color: white;
+            display: inline-block;
+            margin: 1em auto;
+            &:hover {
+                transform: scale(1.3, 1.3);
+                cursor: pointer;
+                transition: 0.5s;
             }
         }
     }
