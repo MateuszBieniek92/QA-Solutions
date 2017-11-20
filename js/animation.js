@@ -89,7 +89,7 @@ $(function () {
     var $form = $('.contact-form').find('form').children();
     var $sendBtn = $('.send-btn');
     var mailPattern = /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/
-    
+
     var $nameInput = $form.first();
     var $mailInput = $form.eq(2);
     var $topicInput = $form.eq(4);
@@ -193,7 +193,7 @@ $(function () {
             }
         } else {
             $nameLabel.html('Podana wartość jest za krótka!');
-            $nameInput.css('border','2px solid #f29d16');
+            $nameInput.css('border', '2px solid #f29d16');
             $mailInput.css('border', ' 1px solid #3e6587');
             $topicInput.css('border', ' 1px solid #3e6587');
             $textarea.css('border', ' 1px solid #3e6587');
@@ -201,6 +201,19 @@ $(function () {
     })
 
 
+    /// scroll Tops
+
+    var $about = $ul.children().first();
+    var $training = $ul.children().first();
+    var $trainingsF2f = $ul.children().first();
+    var $contact = $ul.children().first();
+    
+    $about.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".about-section").offset().top
+        }, 2000);
+    });
 
     showMenu();
     resizeMainBackground();
