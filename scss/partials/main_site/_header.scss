@@ -76,10 +76,10 @@ header {
         width: 100vw;
         text-align: center;
         flex-direction: column;
-//        padding: 1em 0;
+        //        padding: 1em 0;
         li {
             display: block;
-//            padding: 1em 0;
+            //            padding: 1em 0;
             font-size: 20px;
             font-weight: bold;
             a {
@@ -107,8 +107,6 @@ header {
             margin-top: -2.7em;
         }
     }
-    
-    
     .hamburger {
         float: right;
         margin: -4.5em 1.5em 0 0;
@@ -172,18 +170,18 @@ header {
                 background-color: $mainColor;
             }
         }
+        li:hover {
+            a,
+            i {
+                color: $orange;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        }
         a:hover:before {
             visibility: visible;
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
-        }
-        li:hover {
-            a,
-            i {
-                color: $mainColor;
-                transition: 0.3s;
-                cursor: pointer;
-            }
         }
     }
     .hamburger {

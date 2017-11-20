@@ -203,36 +203,58 @@ $(function () {
 
     /// scroll Tops
 
-    var $about = $ul.children().first();
-    var $training = $ul.children().first();
-    var $trainingsF2f = $ul.children().first();
-    var $contact = $ul.children().first();
+    var $about = $ul.children().children().first();
+    var $training = $ul.children().children().eq(1);
+    var $trainingsF2f = $ul.children().children().eq(2);
+    var $contact = $ul.children().children().last();
 
-    $about.on('click', function () {
-        $('html, body').animate({
-            scrollTop: $(".about-section").offset().top
-        }, 2000);
+    console.log($about, $training);
+
+    $about.on('click', function (e) {
+        e.preventDefault();
+        var target = this.hash,
+            $target = $('.about-section');
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 1500, 'swing', function () {
+            window.location.hash = target;
+        });
     });
 
-    $training.on('click', function () {
-        $('html, body').animate({
-            scrollTop: $(".training-section").offset().top
-        }, 2000);
-    });
+//    $training.on('click', function (e) {
+//        e.preventDefault();
+//        var target = this.hash,
+//            $target = $('.training-section');
+//        $('html, body').stop().animate({
+//            'scrollTop': $target.offset().top
+//        }, 1500, 'swing', function () {
+//            window.location.hash = target;
+//        });
+//    });
+    //
+    //    $trainingsF2f.on('click', function (e) {
+    //        e.preventDefault();
+    //        var target = this.hash;
+    //        var $target = $('.training-f2f-section');
+    //        console.log(target,$target);
+    //        $('html, body').stop().animate({
+    //            'scrollTop': $target.offset().top
+    //        }, 1500, 'swing', function () {
+    //            window.location.hash = target;
+    //        });
+    //    });
+    //    $contact.on('click', function (e) {
+    //        e.preventDefault();
+    //        var target = this.hash,
+    //            $target = $('.contact-section');
+    //        $('html, body').stop().animate({
+    //            'scrollTop': $target.offset().top
+    //        }, 1500, 'swing', function () {
+    //            window.location.hash = target;
+    //        });
+    //    });
 
-    $trainingsF2f.on('click', function () {
-        $('html, body').animate({
-            scrollTop: $(".training-f2f-section").offset().top
-        }, 2000);
-    });
 
-    $contact.on('click', function () {
-        $('html, body').animate({
-            scrollTop: $(".contact-section").offset().top
-        }, 2000);
-    });
-
-    
     showMenu();
     resizeMainBackground();
     animatedHamburger();
