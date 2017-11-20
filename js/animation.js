@@ -207,7 +207,7 @@ $(function () {
     var $training = $ul.children().first();
     var $trainingsF2f = $ul.children().first();
     var $contact = $ul.children().first();
-    
+
     $about.on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
@@ -215,6 +215,28 @@ $(function () {
         }, 2000);
     });
 
+    $training.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".training-section").offset().top
+        }, 2000);
+    });
+
+    $trainingsF2f.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".training-f2f-section").offset().top
+        }, 2000);
+    });
+
+    $contact.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".contact-section").offset().top
+        }, 2000);
+    });
+
+    
     showMenu();
     resizeMainBackground();
     animatedHamburger();
