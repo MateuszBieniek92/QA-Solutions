@@ -1,4 +1,4 @@
-.training-section {
+.contact {
     .section-header {
         margin: 3em 0em 3em 0;
     }
@@ -29,6 +29,46 @@
                 color: $mainColor;
                 transition: 0.5s;
                 cursor: pointer;
+            }
+        }
+    }
+    .contact-form {
+        display: flex;
+        justify-content: center;
+        form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            input,
+            textarea {
+                width: 95%;
+                height: 40px;
+                border: 1px solid $mainColor;
+                max-width: 400px;
+                display: inline-block;
+                margin: 1em auto;
+                @media (min-width: 768px) {
+                    width: 400px;
+                    margin-bottom: 2em;
+                }
+            }
+            textarea {
+                height: 150px;
+            }
+            label {}
+            .send-btn {
+                width: 115px;
+                height: 40px;
+                background: $mainColor;
+                border: none;
+                color: white;
+                display: inline-block;
+                margin: 0 auto;
+            }
+             ::placeholder {
+                color: $mainColor;
+                  font-family: 'Arial', sans-serif;
+                 font-size: 14px;
             }
         }
     }

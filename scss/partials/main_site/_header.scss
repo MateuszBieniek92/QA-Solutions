@@ -169,7 +169,7 @@ header {
                 color: $white;
             }
             a:before {
-                background-color: $orange;
+                background-color: $mainColor;
             }
         }
         a:hover:before {
@@ -180,7 +180,7 @@ header {
         li:hover {
             a,
             i {
-                color: $orange;
+                color: $mainColor;
                 transition: 0.3s;
                 cursor: pointer;
             }
