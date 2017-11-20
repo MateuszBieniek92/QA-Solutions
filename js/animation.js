@@ -208,29 +208,25 @@ $(function () {
     var $trainingsF2f = $ul.children().first();
     var $contact = $ul.children().first();
 
-    $about.on('click', function (e) {
-        e.preventDefault();
+    $about.on('click', function () {
         $('html, body').animate({
             scrollTop: $(".about-section").offset().top
         }, 2000);
     });
 
-    $training.on('click', function (e) {
-        e.preventDefault();
+    $training.on('click', function () {
         $('html, body').animate({
             scrollTop: $(".training-section").offset().top
         }, 2000);
     });
 
-    $trainingsF2f.on('click', function (e) {
-        e.preventDefault();
+    $trainingsF2f.on('click', function () {
         $('html, body').animate({
             scrollTop: $(".training-f2f-section").offset().top
         }, 2000);
     });
 
-    $contact.on('click', function (e) {
-        e.preventDefault();
+    $contact.on('click', function () {
         $('html, body').animate({
             scrollTop: $(".contact-section").offset().top
         }, 2000);
