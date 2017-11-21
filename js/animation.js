@@ -23,13 +23,13 @@ $(function () {
     });
 
     $(window).on('rezise', function () {
+        var pix = $(document).scrollTop();
+
         if ($sticky.hasClass('sticky')) {
             pix = $ul.offset().top;
         } else {
             pix = $sticky.offset().top;
         }
-
-        var pix = $(document).scrollTop();
 
         if (pix > top) {
             $sticky.addClass('sticky');
@@ -208,8 +208,6 @@ $(function () {
     var $trainingsF2f = $ul.children().children().eq(2);
     var $contact = $ul.children().children().last();
 
-//    console.log($about, $training);
-
     function clickAndScroll() {
         $('a[href^="#"]').on('click', function (e) {
             e.preventDefault();
@@ -222,8 +220,6 @@ $(function () {
             });
         });
     }
-
-
 
     clickAndScroll();
     showMenu();
