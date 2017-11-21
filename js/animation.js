@@ -217,7 +217,7 @@ $(function () {
             var place = $(this.hash).offset().top;
             $('html, body').stop().animate({
                 scrollTop: place,
-            }, 1000, function () {
+            }, 3000, function () {
                 window.location.hash = target;
             });
         });
