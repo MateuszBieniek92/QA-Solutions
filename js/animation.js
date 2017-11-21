@@ -208,53 +208,24 @@ $(function () {
     var $trainingsF2f = $ul.children().children().eq(2);
     var $contact = $ul.children().children().last();
 
-    console.log($about, $training);
+//    console.log($about, $training);
 
-    $about.on('click', function (e) {
-        e.preventDefault();
-        var target = this.hash,
-            $target = $('.about-section');
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 1500, 'swing', function () {
-            window.location.hash = target;
+    function clickAndScroll() {
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var target = this.hash;
+            var place = $(this.hash).offset().top;
+            $('html, body').stop().animate({
+                scrollTop: place,
+            }, 1000, function () {
+                window.location.hash = target;
+            });
         });
-    });
-
-//    $training.on('click', function (e) {
-//        e.preventDefault();
-//        var target = this.hash,
-//            $target = $('.training-section');
-//        $('html, body').stop().animate({
-//            'scrollTop': $target.offset().top
-//        }, 1500, 'swing', function () {
-//            window.location.hash = target;
-//        });
-//    });
-    //
-    //    $trainingsF2f.on('click', function (e) {
-    //        e.preventDefault();
-    //        var target = this.hash;
-    //        var $target = $('.training-f2f-section');
-    //        console.log(target,$target);
-    //        $('html, body').stop().animate({
-    //            'scrollTop': $target.offset().top
-    //        }, 1500, 'swing', function () {
-    //            window.location.hash = target;
-    //        });
-    //    });
-    //    $contact.on('click', function (e) {
-    //        e.preventDefault();
-    //        var target = this.hash,
-    //            $target = $('.contact-section');
-    //        $('html, body').stop().animate({
-    //            'scrollTop': $target.offset().top
-    //        }, 1500, 'swing', function () {
-    //            window.location.hash = target;
-    //        });
-    //    });
+    }
 
 
+
+    clickAndScroll();
     showMenu();
     resizeMainBackground();
     animatedHamburger();
