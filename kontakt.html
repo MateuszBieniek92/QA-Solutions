@@ -58,14 +58,14 @@
             <div class="row">
                 <p class="section-header">Formularz kontaktowy</p>
                 <div class="contact-form">
-                    <form>
+                    <form method="post" action="form.php">
                         <input name="name" type="text" placeholder="Imię i Nazwisko" required>
                         <label></label>
                         <input name="mail" type="text" placeholder="Adres email" required>
                         <label></label>
                         <input name="topic" type="text" placeholder="Temat" required>
                         <label></label>
-                        <textarea placeholder="Treść..." required></textarea>
+                        <textarea name="message" placeholder="Treść..." required></textarea>
                         <label></label>
                         <label></label>
                     </form>
