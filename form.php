@@ -6,7 +6,7 @@ $message = $_POST['message'];
 $topic = $_POST['topic'];
 
 // Podajesz adres email z którego ma być wysłana wiadomość
-$odkogo = "TwojAdresEmail1@gmail.com";
+$odkogo = "bieniek.mateusz92@gmail.com";
 
 // Podajesz adres email na który chcesz otrzymać wiadomość
 $dokogo = "bieniek.mateusz92@gmail.com";
@@ -21,7 +21,7 @@ $wiadomosc .= "Temat: " . $topic . "\n";
 $wiadomosc .= "Wiadomość: " . $message . "\n";
 
 // Wysyłamy wiadomość
-$sukces = mail($dokogo, $topic, $wiadomosc, "Od: <$email>");
+$sukces = mail($dokogo, $topic, $wiadomosc, "Od: <$odkogo>");
 
 // Przekierowywujemy na potwierdzenie
 if ($sukces){

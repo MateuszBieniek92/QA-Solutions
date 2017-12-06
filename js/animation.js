@@ -86,6 +86,7 @@ $(function () {
 
     // input borders
 
+    var $contactForm = $('.contact-form').find('form');
     var $form = $('.contact-form').find('form').children();
     var $sendBtn = $('.send-btn');
     var mailPattern = /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/
@@ -138,7 +139,9 @@ $(function () {
         $(this).toggleClass('border-input');
     });
 
-    $sendBtn.on('click', function () {
+    var FormIsOk = true;
+
+    $sendBtn.on('click', function (e) {
         var $nameVal = $nameInput.val();
         var $mailVal = $mailInput.val();
         var $topicVal = $topicInput.val();
@@ -150,24 +153,20 @@ $(function () {
             $topicInput.val('');
             $textarea.val('');
         }
-
         if ($nameVal.length > 5) {
             if (mailPattern.test($mailVal)) {
                 if ($topicVal.length > 3) {
                     if ($textVal.length > 5) {
                         //form send
+                        FormIsOk = true;
                         resetLabels();
-                        resetInput();
                         $nameInput.css('border', ' 1px solid #3e6587');
                         $mailInput.css('border', ' 1px solid #3e6587');
                         $topicInput.css('border', ' 1px solid #3e6587');
                         $textarea.css('border', ' 1px solid #3e6587');
-                        $textLabel.css({
-                            'color': '#3e6587',
-                            'font-size': '16px',
-                            'font-weight': 'bold'
-                        }).html('Formularz został wysłany!').fadeOut(4000);
                     } else {
+                        e.preventDefault();
+                        FormIsOk = false;
                         resetLabels();
                         $textLabel.html('Podany opis jest za krótki!');
                         $nameInput.css('border', ' 1px solid #3e6587');
@@ -176,6 +175,8 @@ $(function () {
                         $textarea.css('border', '2px solid #f29d16');
                     }
                 } else {
+                    e.preventDefault();
+                    FormIsOk = false;
                     resetLabels();
                     $topicLabel.html('Podany opis tematu jest za krótki!');
                     $nameInput.css('border', ' 1px solid #3e6587');
@@ -184,6 +185,8 @@ $(function () {
                     $textarea.css('border', ' 1px solid #3e6587');
                 }
             } else {
+                e.preventDefault();
+                FormIsOk = false;
                 resetLabels();
                 $mailLabel.html('Podany adres e-mail jest nie prawidłowy!');
                 $nameInput.css('border', ' 1px solid #3e6587');
@@ -192,6 +195,8 @@ $(function () {
                 $textarea.css('border', ' 1px solid #3e6587');
             }
         } else {
+            e.preventDefault();
+            FormIsOk = false;
             $nameLabel.html('Podana wartość jest za krótka!');
             $nameInput.css('border', '2px solid #f29d16');
             $mailInput.css('border', ' 1px solid #3e6587');
