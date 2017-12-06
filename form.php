@@ -5,7 +5,7 @@ $mail = $_POST['mail'];
 $topic = $_POST['topic'];
 $message = $_POST['message'];
 
-$email_to = "arturmiekus@qasolutions.com.pl";
+$email_to = "bieniek.mateusz92@gmail.com";
 
 $email_subject = "Otrzymales nowa wiadomosc ze strony QA Solutions";
 
