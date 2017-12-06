@@ -1,33 +1,32 @@
 <?php
 
 $name = $_POST['name'];
-$email = $_POST['mail'];
-$message = $_POST['message'];
+$mail = $_POST['mail'];
 $topic = $_POST['topic'];
+$message = $_POST['message'];
 
-// Podajesz adres email z którego ma być wysłana wiadomość
-$odkogo = "bieniek.mateusz92@gmail.com";
+$email_to = "arturmiekus@qasolutions.com.pl";
 
-// Podajesz adres email na który chcesz otrzymać wiadomość
-$dokogo = "bieniek.mateusz92@gmail.com";
+$email_subject = "Otrzymales nowa wiadomosc ze strony QA Solutions";
 
-//$tytul = "Formularz kontaktowy z qasolutions.pl";
+$email_body = "Mail: \r\n";
+$email_body .= "Nowa wiadomosc od uzytkownika: " .  $name . "\r\n";
+$email_body .= "E-mail uzytkownika: "  .  $mail . "\r\n";  
+$email_body .= "Temat: " . $topic . "\r\n";
+$email_body .= "Wysłana wiadomosc: " . $message . "\r\n";
 
-// Przygotowujesz treść wiadomości
-$wiadomosc = "";
-$wiadomosc .= "Imie i nazwisko: " . $name . "\n";
-$wiadomosc .= "Email: " . $email . "\n";
-$wiadomosc .= "Temat: " . $topic . "\n";
-$wiadomosc .= "Wiadomość: " . $message . "\n";
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/plain; charset=utf-8\r\n";
+$headers .= "Content-Transfer-Encoding: 8bit\r\n";
+$headers .= "FROM:". $mail ."\r\n"; 
 
-// Wysyłamy wiadomość
-$sukces = mail($dokogo, $topic, $wiadomosc, "Od: <$odkogo>");
+$success = mail($email_to, $email_subject, $email_body, $headers);
 
-// Przekierowywujemy na potwierdzenie
-if ($sukces){
-  print "  <label>Formularz został wysłany</label>";
+if ($success){
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=success-form\index.html\">";
 }
 else{
-  print " <label>Formularz NIE został wysłany</label>";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=error-form\index.html\">";
 }
+
 ?>
