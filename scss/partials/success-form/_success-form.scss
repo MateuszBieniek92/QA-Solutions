@@ -1,0 +1,44 @@
+.success-section {
+    .success-window {
+        display: flex;
+        flex-direction: column;
+        margin: 7em auto;
+        background: white;
+        height: 175px;
+        @media (min-width: 768px) {
+            width: 400px;
+        }
+        p {
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            padding: 2em;
+            color: $mainColor;
+        }
+        button {
+            width: 100px;
+            height: 35px;
+            border: none;
+            background: $mainColor;
+            margin: 0 auto;
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.error-section {
+    .success-window {
+        p {
+            padding: 2em 0 0.8em 0;
+            text-align: center;
+        }
+    }
+}
